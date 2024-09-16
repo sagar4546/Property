@@ -1,0 +1,81 @@
+/* Tailwind Base and Components */
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+body {
+ 
+  font-family: 'Poppins', sans-serif; /* or any font from your Figma */
+}
+
+.header {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background-color: #1b2838; /* Dark Blue background */
+}
+
+.card {
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift effect */
+}
+
+button img {
+  transition: transform 0.2s ease-in-out;
+}
+
+button:hover img {
+  transform: scale(1.1);
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  inset-x: 0;
+  background-color: white;
+  box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  
+}
+
+.footer a {
+  position: relative;
+  text-decoration: none;
+  color: #1d4ed8; /* Blue color for text */
+}
+
+.footer a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 5px;
+  background-color: #1d4ed8; /* Blue color for the dot */
+  border-radius: 50%;
+}
+
+.property-card {
+  position: relative;
+}
+
+.relative {
+  position: relative;
+}
+
+.favorite-button {
+  transition: color 0.3s ease;
+}
+
+.favorite-button.text-red-700 {
+  color: #e11d48; /* Tailwind red-700 */
+}
+#property-container-home, 
+#property-container-search, 
+#property-container-favorites, 
+#property-container-details,#pwc {
+  margin-bottom: 4rem; /* Adjust this value based on the footer height */
+}
